@@ -19,6 +19,7 @@ CREATE TABLE employee_details (
     employee_id INTEGER,
     company_role VARCHAR(50),
     department VARCHAR(50),
+    salary INTEGER,
     FORIEGN KEY (employee_id) REFERENCES employees(id)
 )
 
