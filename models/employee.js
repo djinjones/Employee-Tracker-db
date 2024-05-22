@@ -20,13 +20,18 @@ Employee.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    role_id: {
+    roleId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: Role,
         key: 'id',
-      }
+      },
+    },
+    manager: {
+      type: DataTypes.STRING,
+      allowNull: false,
+
     },
   },
   {
@@ -34,14 +39,14 @@ Employee.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'employee',
+    modelName: 'Employee',
   }
 );
 
 Employee.associate = (models) => {
     Employee.belongsTo(models.Role, {
-      foreignKey: 'role_id',
-      as: 'role', // Alias for the relation
+      foreignKey: 'roleId',
+      as: 'role', 
     });
   };
   

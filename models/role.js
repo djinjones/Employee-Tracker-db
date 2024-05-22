@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const Department = require('./department');
+const Employee = require('./employee'); 
 
 class Role extends Model {}
 
@@ -20,7 +21,7 @@ Role.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    department_id: {
+    departmentId: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
@@ -34,16 +35,22 @@ Role.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'role',
+    modelName: 'Role',
   }
 );
 
 Role.associate = (models) => {
-    Role.belongsTo(models.Department, {
-      foreignKey: 'department_id',
-      as: 'department', 
-    });
-  };
-  
+
+  Role.belongsTo(models.Department, {
+    foreignKey: 'departmentId',
+    as: 'department', 
+  });
+
+
+  Role.hasMany(models.Employee, {
+    foreignKey: 'roleId',
+    as: 'employees',
+  });
+};
 
 module.exports = Role;

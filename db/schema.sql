@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS biznis_db;
 CREATE DATABASE biznis_db;
 
--- \c biznis_db;
+\c biznis_db;
 
 -- DROP TABLE IF EXISTS employees;
 -- DROP TABLE IF EXISTS employee_details;
