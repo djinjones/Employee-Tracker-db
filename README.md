@@ -13,10 +13,16 @@
 
 
 ## Description 
-Hello, this is a simple program that lets users store information about employees in the terminal using inquierer and a database
+Hello, this is a simple program that lets users store information about employees in the terminal using inquierer and a database. I tried to get this to be able to run remotely as an extra step, but I was getting too close to the deadline for this project so I just turned it in and have no plans to continue working on it.
 
 ## Installation
 You can install this app by navigating to my [github](https://github.com/djinjones/Employee-Tracker-db) and cloning the repository
+
+Then, you will need to run ```npm i```
+
+Once packages have been installed ```npm start```
+
+In order to use this you will need postgreSQL installed and have a connection to a database. I am not going to show how to do that because there are many videos out there and I SERIOUSLY doubt anyone is even going to read this.
 
 ## Tests 
 
@@ -29,7 +35,7 @@ Testing is an essential part of maintaining code quality and ensuring that our p
 As of right now we dont have any testing features for this project but we plan to add more features and APIs to allow a wider range of markdown generaton. We also plan to add more commands such as /help. <!-- leave this blank -->
 
 ## Links
-N/A
+[Screencastify](https://drive.google.com/file/d/1PT_Xjkci7UB979QFQ88mRqkKNRPRGdBf/view)
 
 ## API
 N/A
